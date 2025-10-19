@@ -72,6 +72,39 @@
         pip install -r requirements.txt
         python asr_gui.py
         ```
+
+    - **使用命令行工具**
+
+        ```bash
+        pip install -r requirements.txt
+        python asr_cli.py --help
+        ```
+
+        **命令行工具特性：**
+        - 🎵 支持多种音频/视频格式
+        - 🚀 支持三种ASR引擎（B接口、J接口、K接口）
+        - 📄 支持TXT、SRT、ASS三种输出格式
+        - ⚡ 支持批量处理和文件夹递归扫描
+        - 💾 智能缓存机制，避免重复处理
+        - 🔧 自动视频转音频功能
+
+        **使用示例：**
+        ```bash
+        # 处理单个文件
+        python asr_cli.py -i audio.mp3 -e b -f txt
+
+        # 批量处理文件夹
+        python asr_cli.py -i /path/to/audio/folder -e b -f srt
+
+        # 处理视频文件
+        python asr_cli.py -i video.mp4 -e j -f ass
+        ```
+
+        **安装到系统PATH（可选）：**
+        ```bash
+        python install_cli.py
+        # 安装后可直接使用: asr_cli --help
+        ```
 ---
 
 ## 日志
